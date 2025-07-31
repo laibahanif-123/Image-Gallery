@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  <h1>Image Gallery</h1>
+  <img src="city.jpg">
+  <br>
+  <br>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <!-- Gallery Container -->
+  <div class="gallery">
+    <div class="gallery-item nature">
+      <img src="nature 2.jpg" alt="Nature 1" onclick="openLightbox(this)"   width="100" heiht="100"/>
+    </div>
+    <div class="gallery-item city">
+      <img src="city333.jpg" alt="City 1" onclick="openLightbox(this)"  width="100" heiht="100"/>
+    </div>
+    <div class="gallery-item nature">
+      <img src="nature2.jpg" alt="Nature 2" onclick="openLightbox(this)" width="100" heiht="100" />
+    </div>
+    <div class="gallery-item city">
+      <img src="city222.jpg" alt="City 2" onclick="openLightbox(this)"  width="100" heiht="100"/>
+    </div>
+    <!-- Add more items with appropriate classes -->
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Lightbox Image">
+    <button class="prev" onclick="navigateLightbox(-1)">&#10094;</button>
+    <button class="next" onclick="navigateLightbox(1)">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
